@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
 
+/* Configs */
 :root {
     --cor0: #ebe5c5;
     --cor1: #EEDE81;
@@ -19,6 +20,7 @@
     padding: 0px;
 }
 
+/* TAGs */
 body {
     background-color: var(--cor0);
     font-family: var(--fonte-padrao);
@@ -62,6 +64,24 @@ strong {
     color: gray;
 }
 
+ul{
+    margin-top: 15px;
+}
+
+li {
+    list-style-type: none;
+    font-weight: bolder;
+    padding: 5px;
+    font-size: 1.2em;
+    text-align: left;
+    margin-left: 35%;
+}
+
+li > a{
+    padding-left: 7px;
+}
+
+/* IDs */
 #sec-1, #sec-4{
     background-color: white;
 }
@@ -71,9 +91,33 @@ strong {
     color: white;
 }
 
+#sec-5 {
+    padding: 0px;
+}
+
 img#logo{
     width: 100px;
     padding: 25px;
+}
+
+/* Class */
+.super-text{
+    padding-top: 35%;
+    padding-bottom: 7%;
+    text-align: center;
+    font-family: Satisfy, 'Courier New', Courier, monospace;
+    font-size: 3em;
+    color: white;
+    background-image: url("../images/massa.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: top center;
+}
+
+.center{
+    width: 100%;
+    height: 25%;
 }
 
 .col{
@@ -132,23 +176,11 @@ img#logo{
     padding: 0px;
 }
 
-ul{
-    margin-top: 15px;
+.img-footer{
+    border-radius: 15%;
 }
 
-li {
-    list-style-type: none;
-    font-weight: bolder;
-    padding: 5px;
-    font-size: 1.2em;
-    text-align: left;
-    margin-left: 35%;
-}
-
-li > a{
-    padding-left: 7px;
-}
-
+/* Medias query */
 @media screen and (max-width: 850px) {
     #logo{
         padding: 0px;
@@ -302,6 +334,49 @@ li > a{
         width: 100%;
         height: 100%;
     }
+
+    .col-footer{
+        display: grid;
+        grid-template:
+            ". . . . espaco2 espaco2" 100px
+            "espaco4 espaco4 . . espaco2 espaco2" 100px
+            ". . . . . ." 50px
+            "espaco1 espaco1 . espaco3 espaco3 ." 100px
+            "espaco1 espaco1 . espaco3 espaco3 ." 100px
+            ". . . . . ." 100px
+            / 2fr 2fr 1fr 2fr 2fr 2fr
+        ;
+        justify-content: center;
+        padding: 10px;
+        margin-bottom: 25px;
+    }
+
+    .espaco1{
+        grid-area: espaco1;
+    }
+    
+    .espaco2{
+        grid-area: espaco2;
+    }
+    
+    .espaco3{
+        grid-area: espaco3;
+    }
+
+    .espaco4{
+        grid-area: espaco4;
+    }
+
+    .img-footer{
+        display: inline;
+        width: 100%;
+        height: 100%;
+    }
+
+    .super-text{
+        padding-top: 300px;
+        padding-bottom: 75x;
+    }
 }
 
 @media screen and (min-width: 1100px) {
@@ -317,5 +392,20 @@ li > a{
             / 330px 330px 330px
         ;
         justify-content: center;
+    }
+    /*328 - 200 img*/
+    .col-footer{
+        display: grid;
+        grid-template:
+            ". . . . espaco2 espaco2" 100px
+            "espaco4 espaco4 . . espaco2 espaco2" 100px
+            ". . . . . ." 60px
+            "espaco1 espaco1 . espaco3 espaco3 ." 100px
+            "espaco1 espaco1 . espaco3 espaco3 ." 100px
+            ". . . . . ." 100px
+            / 165px 165px 50px 165px 165px 165px
+        ;
+        justify-content: center;
+        margin-bottom: 25px;
     }
 }
