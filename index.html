@@ -6,7 +6,7 @@
     <title>[ANSU] Sweet Cake</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <!--<script src="js/script.js" defer></script>-->
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <section id="sec-1" >
@@ -87,7 +87,7 @@
         <h1>Bem vindo(a)</h1>
         <h2>Contate-Nos</h2>
         <img src="images/cachorro-roubando-bolo.jpg" alt="cachorro-roubando-bolo.jpg" class="ladrao">
-        <img src="images/bolo-chocolate-chantily.jpg" alt="chocolate-chantily.jpg" class="hide">
+        <img src="images/bolo-chocolate-chantily.jpg" alt="chocolate-chantily.jpg" class="hide ladrao">
         <ul>
             <li><img src="images/social/facebook.png" alt="social.png" class="social"><a href="#">Facebook</a></li>
             <li><img src="images/social/instagram.png" alt="social.png" class="social"><a href="#">Instagram</a></li>
@@ -97,27 +97,5 @@
             <li><img src="images/social/whatsapp.png" alt="social.png" class="social"><a href="#">WhatsApp</a></li>
         </ul>
     </section>
-
-    <script>
-        //Lista de nomes de todas as imagens
-        let listImage = ["bolo-baunilia-morango", "bolo-brigadeirinho", "bolo-cafe", "bolo-cenourinha", "bolo-chocolate-chantily", "bolo-frutas-vermelhas", "bolo-morango", "bolo-torre-chocolate", "bolo-torre", "bolo-uva-ninho", "brauly-nutella", "cupcake"];
-
-        //Index inicial para pegar imagem
-        let index = 0;
-
-        function changeImage(c) {
-            
-            index += c;
-
-            if(index > listImage.length -1) index = 0;
-            else if(index < 0) index = listImage.length-1;
-
-            document.getElementById("img-change").src="images/"+listImage[index]+".jpg";
-
-            return index;
-        }
-
-        setInterval(changeImage, 2500, 1);
-    </script>
 </body>
 </html>
